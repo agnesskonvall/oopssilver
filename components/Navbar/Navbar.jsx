@@ -6,6 +6,7 @@ import React, { useState } from "react";
 const Nav = styled.nav`
   display: none;
   color: black;
+  font-family: "RedHatDisplay";
 
   @media screen and (min-width: 768px) {
     box-sizing: border-box;
