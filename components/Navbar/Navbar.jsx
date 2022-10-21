@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styled from "styled-components";
-import Image from "next/image";
 import React, { useState } from "react";
 
 const Nav = styled.nav`
