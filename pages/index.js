@@ -7,7 +7,7 @@ import MobileNavbar from "../components/MobileNavbar/MobileNavBar";
 export default function Home() {
   return (
     <div className={styles.container}>
-      {/* <Navbar></Navbar> */}
+      <Navbar></Navbar>
       <MobileNavbar></MobileNavbar>
     </div>
   );

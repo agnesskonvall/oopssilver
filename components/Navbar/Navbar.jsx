@@ -13,7 +13,7 @@ const Nav = styled.nav`
     -webkit-box-sizing: border-box;
     display: block;
     width: 100%;
-    height: 15vh;
+    height: 20vh;
     margin: 0 auto;
     display: none;
     display: grid;
@@ -24,7 +24,7 @@ const Nav = styled.nav`
     text-align: center;
     background-color: beige;
     padding-top: 3vh;
-    padding-bottom: 14vh;
+    padding-bottom: 18vh;
     border-color: black;
     border-style: solid;
   }
@@ -48,6 +48,10 @@ const Nav = styled.nav`
     text-align: center;
     background-color: beige;
     padding-top: 5vh;
+    padding-bottom: 15vh;
+  }
+
+  @media screen and (min-width: 1024px) {
     padding-bottom: 18vh;
   }
 
@@ -76,8 +80,9 @@ const NavItem = styled.a`
   }
 `;
 const Logo = styled.img`
-  height: 100px;
+  height: 120px;
   width: auto;
+  padding-bottom: 10px;
 `;
 
 const Navbar = ({ text, href, active }) => {
