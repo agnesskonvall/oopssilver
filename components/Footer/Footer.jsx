@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const FooterWrapper = styled.footer`
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   height: 28rem;
