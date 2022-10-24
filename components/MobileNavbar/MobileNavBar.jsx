@@ -6,7 +6,6 @@ const MobileNav = styled.nav`
   background-color: beige;
   color: #1e1e1e;
   display: block;
-
   gap: 5vh;
   align-items: center;
   text-align: center;
@@ -38,15 +37,16 @@ const SocialMediaLink = styled.img`
 const SocialMediaContainer = styled.div``;
 
 const NavList = styled.div`
+  display: grid;
   list-style-type: none;
-  align-items: flex-start;
   flex-direction: column;
-  position: fixed;
   width: 100vw;
-  height: 173vh;
+  height: 50%;
   margin: 0;
   z-index: 10;
   background-color: beige;
+  margin-top: 2rem;
+  font-size: 26px;
 `;
 
 const HamburgerIcon = styled.img`
@@ -59,9 +59,13 @@ const HamburgerIcon = styled.img`
 const CrossIcon = styled.img`
   height: 50px;
   width: auto;
+  margin-top: 0.8rem;
+  padding-right: 1rem;
+  z-index: 10;
 `;
 
 const NavItem = styled.a`
+  height: 1px;
   &:focus,
   :hover {
     text-decoration: underline;
@@ -69,6 +73,9 @@ const NavItem = styled.a`
   }
 `;
 
+const NavWrapper = styled.div`
+  height: 100vh;
+`;
 const MobileNavbar = ({ text, href, active }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -85,27 +92,35 @@ const MobileNavbar = ({ text, href, active }) => {
             onClick={() => setOpenMenu(!openMenu)}
           ></HamburgerIcon>
         )}
-        {openMenu && <CrossIcon src="/cross.svg"></CrossIcon>}
+
+        {openMenu && (
+          <CrossIcon
+            src="/cross.svg"
+            onClick={() => setOpenMenu(!openMenu)}
+          ></CrossIcon>
+        )}
       </NavContainer>
       {openMenu && (
-        <NavList>
-          <Link href={"/smycken"}>
-            <NavItem className="one">SMYCKEN</NavItem>
-          </Link>
-          <Link href={"/faq"}>
-            <NavItem className="two">FAQ</NavItem>
-          </Link>
-          <Link href={"/om"}>
-            <NavItem className="three">KONTAKT</NavItem>
-          </Link>
-          <Link href={"/bestall"}>
-            <NavItem className="four">BESTÄLLNING</NavItem>
-          </Link>
-          <SocialMediaContainer>
-            <SocialMediaLink src="/facebook.svg"></SocialMediaLink>
-            <SocialMediaLink src="/instagram.svg"></SocialMediaLink>
-          </SocialMediaContainer>
-        </NavList>
+        <NavWrapper>
+          <NavList>
+            <Link href={"/smycken"}>
+              <NavItem className="one">SMYCKEN</NavItem>
+            </Link>
+            <Link href={"/faq"}>
+              <NavItem className="two">FAQ</NavItem>
+            </Link>
+            <Link href={"/om"}>
+              <NavItem className="three">KONTAKT</NavItem>
+            </Link>
+            <Link href={"/bestall"}>
+              <NavItem className="four">BESTÄLLNING</NavItem>
+            </Link>
+            <SocialMediaContainer>
+              <SocialMediaLink src="/facebook.svg"></SocialMediaLink>
+              <SocialMediaLink src="/instagram.svg"></SocialMediaLink>
+            </SocialMediaContainer>
+          </NavList>
+        </NavWrapper>
       )}
     </MobileNav>
   );
