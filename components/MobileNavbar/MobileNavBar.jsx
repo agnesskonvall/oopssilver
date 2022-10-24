@@ -9,6 +9,7 @@ const MobileNav = styled.nav`
   gap: 5vh;
   align-items: center;
   text-align: center;
+  font-family: "RedHatDisplay";
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -31,10 +32,16 @@ const TitleText = styled.h1`
 `;
 
 const SocialMediaLink = styled.img`
-  height: 30px;
+  height: 40px;
   width: auto;
 `;
-const SocialMediaContainer = styled.div``;
+const SocialMediaContainer = styled.div`
+  margin-right: 50px;
+
+  .facebook {
+    margin-right: 20px;
+  }
+`;
 
 const NavList = styled.div`
   display: grid;
@@ -46,18 +53,19 @@ const NavList = styled.div`
   z-index: 10;
   background-color: beige;
   margin-top: 2rem;
-  font-size: 26px;
+  font-size: 20px;
+  text-align: end;
 `;
 
 const HamburgerIcon = styled.img`
-  height: 50px;
+  height: 40px;
   width: auto;
-  margin-top: 0.8rem;
+  margin-top: 1rem;
   padding-right: 1rem;
 `;
 
 const CrossIcon = styled.img`
-  height: 50px;
+  height: 40px;
   width: auto;
   margin-top: 0.8rem;
   padding-right: 1rem;
@@ -65,7 +73,7 @@ const CrossIcon = styled.img`
 `;
 
 const NavItem = styled.a`
-  height: 1px;
+  margin-right: 50px;
   &:focus,
   :hover {
     text-decoration: underline;
@@ -75,6 +83,7 @@ const NavItem = styled.a`
 
 const NavWrapper = styled.div`
   height: 100vh;
+  padding-top: 5vh;
 `;
 const MobileNavbar = ({ text, href, active }) => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -116,7 +125,10 @@ const MobileNavbar = ({ text, href, active }) => {
               <NavItem className="four">BESTÄLLNING</NavItem>
             </Link>
             <SocialMediaContainer>
-              <SocialMediaLink src="/facebook.svg"></SocialMediaLink>
+              <SocialMediaLink
+                className="facebook"
+                src="/facebook.svg"
+              ></SocialMediaLink>
               <SocialMediaLink src="/instagram.svg"></SocialMediaLink>
             </SocialMediaContainer>
           </NavList>
