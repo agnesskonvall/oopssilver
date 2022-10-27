@@ -11,6 +11,10 @@ const Nav = styled.nav`
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: 1px;
     display: block;
     width: 100%;
     height: 20vh;
@@ -35,6 +39,10 @@ const Nav = styled.nav`
     -webkit-box-sizing: border-box;
     border-color: black;
     border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: 1px;
     display: block;
     width: 100%;
     height: 15vh;

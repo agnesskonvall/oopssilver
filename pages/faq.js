@@ -4,14 +4,14 @@ import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar/Navbar";
 import MobileNavbar from "../components/MobileNavbar/MobileNavBar";
 import Footer from "../components/Footer/Footer";
-import InstagramSection from "../components/InstagramSection/InstagramSection";
+import FaqSection from "../components/FaqSection/FaqSection";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Navbar></Navbar>
       <MobileNavbar></MobileNavbar>
-      <InstagramSection></InstagramSection>
+      <FaqSection></FaqSection>
       <Footer></Footer>
     </div>
   );
