@@ -70,26 +70,39 @@ const InstagramImageThree = styled(InstagramImageOne)`
 `;
 
 const Text = styled.p`
-  font-size: 16px;
+  font-size: 36px;
 `;
 
-const TextBox = styled(Text)`
+const TextBox = styled.div`
   margin: 0px 0px 40px 0px;
   @media screen and (min-width: 768px) {
     margin: 0px 0px 16px 0px;
+  }
+`;
+
+const InstagramLink = styled.a`
+  font-size: 26px;
+
+  &:focus,
+  :hover {
+    text-decoration: underline;
+    font-style: normal;
   }
 `;
 const InstagramSection = ({ text, href, active }) => {
   return (
     <InstagramContainer>
       <InstagramTextContainer>
-        <h2 Color>OOPS Silver finns på Instagram!</h2>
-        <TextBox Color>
-          Besök OOPS Silver instagram för de senaste nyheterna!
+        <TextBox>
+          <Text>OOPS Silver finns såklart på Instagram!</Text>
         </TextBox>
-        <Link href="" target="_blank" rel="noreferrer" Color>
-          Följ @oopssilver på Instagram
-        </Link>
+        <InstagramLink
+          href="https://www.instagram.com/oops_silver/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Följ @oops_silver på Instagram
+        </InstagramLink>
       </InstagramTextContainer>
       <InstagramImageContainer>
         <InstagramImageOne>
