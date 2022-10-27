@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CardWrapper = styled.div`
-  height: 240px;
-  width: 160px;
+  height: 260px;
+  width: 170px;
   background-color: beige;
   border: #15762a solid 5px;
   border-radius: 10px;
@@ -23,13 +23,17 @@ const CardWrapper = styled.div`
 
 const TextWrapper = styled.div`
   height: 40%;
+
+  @media screen and (min-width: 768px) {
+    height: 40%;
+  }
 `;
 
 const StyledProductImg = styled.div`
   width: 105px;
   height: 105px;
   position: relative;
-  margin: 1rem;
+  /* margin: 1rem; */
   @media screen and (min-width: 768px) {
     width: 180px;
     height: 180px;
@@ -37,7 +41,7 @@ const StyledProductImg = styled.div`
 `;
 
 const ProductTitle = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
   text-transform: uppercase;
   text-align: center;
@@ -62,7 +66,6 @@ const ProductText = styled.p`
   margin: 0;
   margin-top: 0.2rem;
   text-align: center;
-  padding: 0.3rem;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
@@ -74,12 +77,14 @@ const ProductText = styled.p`
 `;
 
 const ProductSize = styled.div`
+  font-size: 10px;
+  text-align: center;
+  margin: 0;
+
   @media screen and (min-width: 768px) {
     font-size: 14px;
     padding-left: 1rem;
     padding-right: 1rem;
-    text-align: center;
-    margin: 0;
   }
 `;
 

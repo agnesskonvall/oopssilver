@@ -6,7 +6,7 @@ import Card from "../components/Card/Card";
 function HomePage() {
   return (
     <div>
-      <Card></Card>
+      {/* <Card></Card> */}
       <Footer></Footer>
     </div>
   );
