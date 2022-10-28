@@ -118,7 +118,7 @@ const MobileNavbar = ({ text, href, active }) => {
             <Link href={"/faq"}>
               <NavItem className="two">FAQ</NavItem>
             </Link>
-            <Link href={"/om"}>
+            <Link href={"/kontakt"}>
               <NavItem className="three">KONTAKT</NavItem>
             </Link>
             <Link href={"/bestall"}>

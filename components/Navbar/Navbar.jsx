@@ -105,7 +105,7 @@ const Navbar = ({ text, href, active }) => {
       <Link href={"/"}>
         <Logo src="/logo.svg" className="three"></Logo>
       </Link>
-      <Link href={"/om"}>
+      <Link href={"/kontakt"}>
         <NavItem className="four">KONTAKT</NavItem>
       </Link>
       <Link href={"/bestall"}>
