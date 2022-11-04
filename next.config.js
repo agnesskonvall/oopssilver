@@ -2,6 +2,17 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
 
-module.exports = nextConfig
+  images: {
+    domains: ["cdn.sanity.io"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.cdninstagram.com",
+        pathname: "/v/**",
+      },
+    ],
+  },
+};
+
+module.exports = nextConfig;
