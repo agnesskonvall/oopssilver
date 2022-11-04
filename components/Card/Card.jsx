@@ -92,27 +92,24 @@ const ProductSize = styled.div`
 `;
 
 function Card({ product }) {
-  const { bild, produktnamn, pris, produktbeskrivning, produktmtt } =
+  const { picture, productTitle, price, productText, productSize } =
     product.fields;
-  console.log(product.fields.bild);
   return (
     <div>
       <CardWrapper>
         <StyledProductImg>
           <Image
-            src={"https:" + bild.fields.file.url}
-            width={bild.fields.file.details.image.widht}
-            height={bild.fields.file.details.image.height}
+            src={"https:" + picture.fields.file.url}
+            width={picture.fields.file.details.image.widht}
+            height={picture.fields.file.details.image.height}
             layout="fill"
           ></Image>
         </StyledProductImg>
         <TextWrapper>
-          <ProductTitle>{produktnamn}</ProductTitle>
-          <ProductPrice>{pris}kr</ProductPrice>
-          <ProductText>
-            {documentToReactComponents(produktbeskrivning)}
-          </ProductText>
-          <ProductSize> {documentToReactComponents(produktmtt)}</ProductSize>
+          <ProductTitle>{productTitle}</ProductTitle>
+          <ProductPrice>{price}</ProductPrice>
+          <ProductText>{documentToReactComponents(productText)}</ProductText>
+          <ProductSize> {documentToReactComponents(productSize)}</ProductSize>
         </TextWrapper>
       </CardWrapper>
     </div>
