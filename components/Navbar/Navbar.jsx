@@ -26,7 +26,6 @@ const Nav = styled.nav`
     gap: 5vh;
     align-items: center;
     text-align: center;
-    background-color: beige;
     padding-top: 3vh;
     padding-bottom: 18vh;
     border-color: black;
@@ -54,7 +53,7 @@ const Nav = styled.nav`
     gap: 100px;
     align-items: center;
     text-align: center;
-    background-color: beige;
+
     padding-top: 5vh;
     padding-bottom: 15vh;
   }

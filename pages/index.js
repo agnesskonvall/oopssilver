@@ -7,16 +7,39 @@ import Footer from "../components/Footer/Footer";
 import InstagramSection from "../components/InstagramSection/InstagramSection";
 import Card from "../components/Card/Card";
 import Hero from "../components/Hero/Hero";
-export default function Home() {
+import Circles from "../components/Circles/Circles";
+import { createClient } from "contentful";
+
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
+
+  const res = await client.getEntries({
+    content_type: "produkt",
+  });
+
+  return {
+    props: {
+      products: res.items,
+    },
+  };
+}
+
+export default function Home({ products }) {
   return (
     <div className={styles.container}>
       <Navbar></Navbar>
-       <Hero></Hero>
-      {/* <Card></Card> */}
       <MobileNavbar></MobileNavbar>
+      <Hero></Hero>
+      {products.map((product) => (
+        <Card key={product.sys.id} product={product} />
+      ))}
+
+      {/* <Circles></Circles> */}
       <InstagramSection></InstagramSection>
       <Footer></Footer>
-
     </div>
   );
 }
