@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { getStaticProps } from "../../pages";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 const CardWrapper = styled.div`
   height: 260px;
@@ -91,9 +88,8 @@ const ProductSize = styled.div`
   }
 `;
 
-function Card({ product }) {
-  const { picture, productTitle, price, productText, productSize } =
-    product.fields;
+function Card({ necklace }) {
+  const { picture, title, price, productText, productSize } = necklace.fields;
   return (
     <div>
       <CardWrapper>
@@ -106,10 +102,10 @@ function Card({ product }) {
           ></Image>
         </StyledProductImg>
         <TextWrapper>
-          <ProductTitle>{productTitle}</ProductTitle>
+          <ProductTitle>{title}</ProductTitle>
           <ProductPrice>{price}</ProductPrice>
-          <ProductText>{documentToReactComponents(productText)}</ProductText>
-          <ProductSize> {documentToReactComponents(productSize)}</ProductSize>
+          <ProductText>{productText}</ProductText>
+          <ProductSize> {productSize}</ProductSize>
         </TextWrapper>
       </CardWrapper>
     </div>

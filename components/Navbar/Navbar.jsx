@@ -95,7 +95,7 @@ const Logo = styled.img`
 const Navbar = ({ text, href, active }) => {
   return (
     <Nav>
-      <Link href={"/smycken"}>
+      <Link href={"/halsband"}>
         <NavItem className="one">SMYCKEN</NavItem>
       </Link>
       <Link href={"/faq"}>
