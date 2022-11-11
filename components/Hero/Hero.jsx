@@ -6,6 +6,7 @@ const HeroWrapper = styled.div`
   text-align: center;
   position: relative;
   font-family: "RedHatDisplay";
+  overflow-x: hidden;
 `;
 
 const HeroHeading = styled.h1`
@@ -72,7 +73,7 @@ const HeroContainer = styled.div`
 `;
 
 const HeroImageWrapperMobile = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 400px;
   position: relative;
   display: block;
