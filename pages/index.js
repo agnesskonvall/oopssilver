@@ -28,8 +28,6 @@ import { useState, useEffect } from "react";
 //   };
 // }
 
-
-
 export const getStaticProps = async () => {
   const url = `https://graph.instagram.com/me/media?fields=id,username,media_url,caption,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
   const instagramData = await fetch(url);
@@ -46,7 +44,6 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ images }) {
-
   return (
     <div className={styles.container}>
       <Navbar></Navbar>
@@ -58,7 +55,7 @@ export default function Home({ images }) {
       {/* <Circles></Circles> */}
       <InstagramSection></InstagramSection>
       {/* <ProductMenu></ProductMenu> */}
-      <InstagramSection images={images} />
+      {/* <InstagramSection images={images} /> */}
       <Footer></Footer>
     </div>
   );
