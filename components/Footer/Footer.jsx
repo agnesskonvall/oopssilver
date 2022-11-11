@@ -121,7 +121,9 @@ function Footer() {
         </a>
       </InfoWrapper>
       <InfoWrapper className="five">
-        <h2 className="StyledReturn StyledText">RETUR</h2>
+        <h2 className="StyledReturn StyledText" href="/retur">
+          RETUR
+        </h2>
       </InfoWrapper>
       <IconWrapper className="one">
         <a href="https://facebook.com/">

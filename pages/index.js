@@ -34,8 +34,6 @@ export const getStaticProps = async () => {
   const feed = await instagramData.json();
   const images = feed.data;
 
-  console.log(images[0].permalink);
-
   return {
     props: {
       images,
