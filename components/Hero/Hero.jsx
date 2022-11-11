@@ -106,10 +106,20 @@ function Hero() {
   return (
     <HeroWrapper>
       <HeroImageWrapperMobile>
-        <Image src="/hero2.jpeg" layout="fill" object-fit="contain"></Image>
+        <Image
+          src="/hero2.jpeg"
+          layout="fill"
+          object-fit="contain"
+          alt="heroimage"
+        ></Image>
       </HeroImageWrapperMobile>
       <HeroImageWrapperDesktop>
-        <Image src="/hero.png" layout="fill" object-fit="contain"></Image>
+        <Image
+          src="/hero.png"
+          layout="fill"
+          object-fit="contain"
+          alt="heroimage"
+        ></Image>
       </HeroImageWrapperDesktop>
       <HeroContainer>
         <HeroHeadingWrapper>

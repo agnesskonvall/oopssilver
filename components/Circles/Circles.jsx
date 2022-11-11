@@ -11,7 +11,11 @@ const CirclesWrapper = styled.div`
 function Circles() {
   return (
     <CirclesWrapper>
-      <Image src="/circles.svg" layout="fill"></Image>
+      <Image
+        src="/circles.svg"
+        layout="fill"
+        alt="print of green circles"
+      ></Image>
     </CirclesWrapper>
   );
 }
