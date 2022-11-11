@@ -53,9 +53,8 @@ export default function Home({ images }) {
         <Card key={ring.sys.id} ring={ring} />
       ))} */}
       {/* <Circles></Circles> */}
-      <InstagramSection></InstagramSection>
       {/* <ProductMenu></ProductMenu> */}
-      {/* <InstagramSection images={images} /> */}
+      <InstagramSection images={images} />
       <Footer></Footer>
     </div>
   );
