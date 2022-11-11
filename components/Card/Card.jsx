@@ -100,6 +100,7 @@ function Card({ necklace, ring }) {
             width={picture.fields.file.details.image.widht}
             height={picture.fields.file.details.image.height}
             layout="fill"
+            alt="Bild på smycket"
           ></Image>
         </StyledProductImg>
         <TextWrapper>

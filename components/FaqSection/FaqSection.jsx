@@ -155,13 +155,18 @@ const FaqSection = ({ text, href, active }) => {
             className="image"
             layout="fill"
             src="/images/pink-rings.jpeg"
+            alt="silverringar med rosa resin"
           ></Image>
         </ImageWrapper>
       </QuestionsWrapper>
       <TitleText>SMYCKESSKÖTSEL</TitleText>
       <CareWrapper>
         <ImageWrapper className="necklace-image">
-          <Image layout="fill" src="/images/silver-necklaces.jpeg"></Image>
+          <Image
+            layout="fill"
+            src="/images/silver-necklaces.jpeg"
+            alt="silverhalsband"
+          ></Image>
         </ImageWrapper>
         <TextWrapper>
           <Text>
