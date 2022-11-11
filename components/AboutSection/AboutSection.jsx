@@ -64,6 +64,7 @@ const ContactSection = ({ text, href, active }) => {
           className="image"
           layout="responsive"
           object-fit="contain"
+          alt="Bild på Karin som ler"
         ></Image>
       </ImageWrapper>
       <TextWrapper>
