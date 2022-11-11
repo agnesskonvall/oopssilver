@@ -4,26 +4,16 @@ import React, { useState } from "react";
 const TitleText = styled.h2`
   text-align: center;
   font-weight: bold;
-  text-align: center;
   font-family: "RedHatDisplayBold";
 
   @media screen and (min-width: 768px) {
   }
 
   @media screen and (min-width: 992px) {
-    width: 35rem;
     height: auto;
     padding: 2rem;
     font-size: 36px;
   }
-`;
-const BoldText = styled.p`
-  font-family: "RedHatDisplayBold";
-  font-size: 22px;
-`;
-const Text = styled.p`
-  font-size: 16px;
-  font-family: "RedHatDisplay";
 `;
 
 const FormWrapper = styled.div`
@@ -74,36 +64,97 @@ export default function FormSection() {
   const [email, setEmail] = useState("");
   const [adress, setAdress] = useState("");
   const [model, setModel] = useState("");
-  // const [color, setColor] = useState("");
+  const [color, setColor] = useState("");
   const [size, setSize] = useState("");
-  const [gift, setGift] = useState("");
+  const [setGift] = useState("");
   const [message, setMessage] = useState("");
+
+  //   Form validation state
+  const [errors, setErrors] = useState({});
+
+  //   Setting button text on form submission
+  const [buttonText, setButtonText] = useState("Send");
+
+  // Setting success or failure messages states
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showFailureMessage, setShowFailureMessage] = useState(false);
+
+  // Validation check method
+  const handleValidation = () => {
+    let tempErrors = {};
+    let isValid = true;
+
+    if (fullname.length <= 0) {
+      tempErrors["fullname"] = true;
+      isValid = false;
+    }
+    if (email.length <= 0) {
+      tempErrors["email"] = true;
+      isValid = false;
+    }
+    if (adress.length <= 0) {
+      tempErrors["adress"] = true;
+      isValid = false;
+    }
+    if (model.length <= 0) {
+      tempErrors["model"] = true;
+      isValid = false;
+    }
+    if (color.length <= 0) {
+      tempErrors["color"] = true;
+      isValid = false;
+    }
+    if (size.length <= 0) {
+      tempErrors["size"] = true;
+      isValid = false;
+    }
+    if (message.length <= 0) {
+      tempErrors["message"] = true;
+      isValid = false;
+    }
+
+    setErrors({ ...tempErrors });
+    console.log("errors", errors);
+    return isValid;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("/api/sendgrid", {
-      body: JSON.stringify({
-        fullname: fullname,
-        email: email,
-        adress: adress,
-        model: model,
-        // color: color,
-        size: size,
-        message: message,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
+    let isValidForm = handleValidation();
 
-    const { error } = await res.json();
-    if (error) {
-      console.log(error);
-      return;
+    if (isValidForm) {
+      setButtonText("Sending");
+      const res = await fetch("/api/sendgrid", {
+        body: JSON.stringify({
+          fullname: fullname,
+          email: email,
+          adress: adress,
+          model: model,
+          color: color,
+          size: size,
+          message: message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+
+      const { error } = await res.json();
+      if (error) {
+        console.log(error);
+        setShowSuccessMessage(false);
+        setShowFailureMessage(true);
+        setButtonText("Send");
+        return;
+      }
+      setShowSuccessMessage(true);
+      setShowFailureMessage(false);
+      console.log(fullname, email, adress, model, color, size, message);
+
+      setButtonText("Send");
     }
-    console.log(fullname, email, adress, model, size, message);
   };
 
   return (
@@ -183,27 +234,23 @@ export default function FormSection() {
             </div>
           </div>
 
-          {/* <div>
+          <div>
             <label htmlFor="Färgval">Färgval</label>
             <div>
               <input
                 id="Färgval"
                 name="Färgval"
-                className="input-file"
-                type="file"
-                accept="image/*"
+                type="text"
                 value={color}
                 onChange={(e) => {
-                  setColor(e.target.files);
+                  setColor(e.target.value);
                 }}
               />
               <HelpBlock>
-                Ladda upp en bild på färgen du vill ha om du har en sådan. Du
-                kan också skriva färgkoden eller beskriva färgen i
-                meddelanderutan.
+                Skriv färgkoden eller beskriv din önskade färg.
               </HelpBlock>
             </div>
-          </div> */}
+          </div>
 
           <div>
             <label htmlFor="Mått och storlek">Mått och storlek</label>
@@ -280,7 +327,12 @@ export default function FormSection() {
           <div>
             <label htmlFor="Beställ">Beställ</label>
             <div>
-              <Button id="Beställ" name="Beställ" className="btn btn-primary">
+              <Button
+                id="Beställ"
+                name="Beställ"
+                className="btn btn-primary"
+                type="submit"
+              >
                 Beställ
               </Button>
             </div>

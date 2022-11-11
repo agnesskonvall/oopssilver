@@ -127,7 +127,7 @@ const OrderSection = ({ text, href, active }) => {
         <CheckList>
           <CheckItem>Modell på smycket</CheckItem>
           <CheckItem>Mått och storlek</CheckItem>
-          <CheckItem>Eventuellt färgval (med bild eller färgkod)</CheckItem>
+          <CheckItem>Eventuellt färgval (färgkod eller beskrivning)</CheckItem>
           <CheckItem>Adress</CheckItem>
           <CheckItem>Om du önskar presentförpackning</CheckItem>
         </CheckList>
