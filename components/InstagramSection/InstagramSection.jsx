@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import NextImage from "next/image";
 
 const InstagramContainer = styled.div`
-  background-color: white;
   font-family: "RedHatDisplay";
   padding: 30px 20px 32px 20px;
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 30px 32px 32px 32px;
+    padding-top: 0;
   }
   @media screen and (min-width: 992px) {
   }
@@ -43,8 +43,6 @@ const InstagramImage = styled.div`
   border: solid;
   border-color: green;
   border-radius: 10px;
-  height: auto;
-  width: 100%;
   @media screen and (min-width: 768px) {
     width: 50%;
     width: 178px;
@@ -93,8 +91,8 @@ const InstagramLink = styled.a`
     font-style: normal;
   }
 `;
-
 const InstagramSection = ({ images }) => {
+
   return (
     <InstagramContainer>
       <InstagramTextContainer>

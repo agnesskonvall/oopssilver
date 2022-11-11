@@ -43,6 +43,7 @@ const StyledProductImg = styled.div`
 const ProductTitle = styled.p`
   font-size: 16px;
   margin: 0;
+  margin-top: 1rem;
   text-transform: uppercase;
   text-align: center;
 
@@ -88,55 +89,24 @@ const ProductSize = styled.div`
   }
 `;
 
-function Card() {
+function Card({ necklace, ring }) {
+  const { picture, title, price, productText, productSize } = necklace.fields;
   return (
     <div>
       <CardWrapper>
         <StyledProductImg>
-          <Image src="/produkt.png" layout="fill"></Image>
+          <Image
+            src={"https:" + picture.fields.file.url}
+            width={picture.fields.file.details.image.widht}
+            height={picture.fields.file.details.image.height}
+            layout="fill"
+          ></Image>
         </StyledProductImg>
         <TextWrapper>
-          <ProductTitle>MIDI</ProductTitle>
-          <ProductPrice>750 KR</ProductPrice>
-          <ProductText>
-            Enfärgad ring gjord av sterlingsilver - fylld med resin.
-          </ProductText>
-          <ProductSize>
-            Mått: Ca 25 mm i diameter. Justerbar ringstomme.
-          </ProductSize>
-        </TextWrapper>
-      </CardWrapper>
-      <CardWrapper>
-        <StyledProductImg>
-          <Image src="/produkt.png" layout="fill"></Image>
-        </StyledProductImg>
-        <TextWrapper>
-          <ProductTitle>Oxiderade cirkelörhängen</ProductTitle>
-          <ProductPrice>450kr/500kr/550kr</ProductPrice>
-          <ProductText>
-            Örhängen med stift gjorda av oxiderat sterlingsilver.
-          </ProductText>
-          <ProductSize>
-            Mått: Välj mellan 13 mm, 17 mm, 20 mm. Justerbar ringstomme.
-          </ProductSize>
-        </TextWrapper>
-      </CardWrapper>
-      <CardWrapper>
-        <StyledProductImg>
-          <Image src="/produkt.png" layout="fill"></Image>
-        </StyledProductImg>
-        <TextWrapper>
-          <ProductTitle>Assymetriska</ProductTitle>
-          <ProductPrice>
-            650kr/750kr/850kr/<br></br>950kr/1050kr
-          </ProductPrice>
-          <ProductText>
-            Enfärgade assymetriska ringar gjorda av sterlingsilver - fyllda med
-            resin.
-          </ProductText>
-          <ProductSize>
-            Mått: Finns i storlekarna Mini, Midi, Maxi, Mega & OOmega.
-          </ProductSize>
+          <ProductTitle>{title}</ProductTitle>
+          <ProductPrice>{price}</ProductPrice>
+          <ProductText>{productText}</ProductText>
+          <ProductSize> {productSize}</ProductSize>
         </TextWrapper>
       </CardWrapper>
     </div>

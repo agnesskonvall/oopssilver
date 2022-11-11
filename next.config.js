@@ -4,7 +4,8 @@ const nextConfig = {
   swcMinify: true,
 
   images: {
-    domains: ["cdn.sanity.io"],
+    domains: ["images.ctfassets.net"],
+
     remotePatterns: [
       {
         protocol: "https",
