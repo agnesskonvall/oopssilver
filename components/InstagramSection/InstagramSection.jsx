@@ -36,39 +36,39 @@ const InstagramImageContainer = styled.div`
     gap: 3rem;
   }
 `;
-const InstagramImageOne = styled.div`
+const InstagramImage = styled.div`
+  overflow: hidden;
   position: relative;
   margin: 32px 0px 0px 0px;
   border: solid;
   border-color: green;
   border-radius: 10px;
-  width: 33%;
-  overflow: hidden;
-
   @media screen and (min-width: 768px) {
+    width: 50%;
     width: 178px;
     margin: 0px;
   }
   @media screen and (min-width: 992px) {
-    width: 340px;
+    width: 40%;
     margin: 32px 0px 0px 0px;
   }
 `;
-const InstagramImageTwo = styled(InstagramImageOne)`
+
+const InstagramImageTwo = styled(InstagramImage)`
   display: none;
   @media screen and (min-width: 768px) {
     display: block;
   }
   @media screen and (min-width: 992px) {
-  }
+  } ;
 `;
-const InstagramImageThree = styled(InstagramImageOne)`
+const InstagramImageThree = styled(InstagramImage)`
   display: none;
   @media screen and (min-width: 768px) {
   }
   @media screen and (min-width: 992px) {
     display: block;
-  }
+  } ;
 `;
 
 const Text = styled.p`
@@ -91,8 +91,8 @@ const InstagramLink = styled.a`
     font-style: normal;
   }
 `;
+const InstagramSection = ({ images }) => {
 
-const InstagramSection = ({ text, href, active }) => {
   return (
     <InstagramContainer>
       <InstagramTextContainer>
@@ -108,43 +108,44 @@ const InstagramSection = ({ text, href, active }) => {
         </InstagramLink>
       </InstagramTextContainer>
       <InstagramImageContainer>
-        <InstagramImageOne>
+        <InstagramImage>
           <>
-            <a href="/" target="_blank" rel="noreferrer">
+            <a href={images[0].permalink} target="_blank" rel="noreferrer">
               <NextImage
-                src="/images/pink-rings.jpeg"
-                width="100%"
-                height="100%"
+                src={images[0].media_url}
+                alt={images[0].caption}
                 layout="responsive"
                 objectFit="cover"
+                width="100%"
+                height="100%"
               />
             </a>
           </>
-        </InstagramImageOne>
+        </InstagramImage>
         <InstagramImageTwo>
           <>
-            <a href="/" target="_blank" rel="noreferrer">
+            <a href={images[1].permalink} target="_blank" rel="noreferrer">
               <NextImage
-                src="/images/pink-rings.jpeg"
-                // alt={images[1].caption}
-                width="100%"
-                height="100%"
+                src={images[1].media_url}
+                alt={images[1].caption}
                 layout="responsive"
                 objectFit="cover"
-                border-radius="10px"
+                width="100%"
+                height="100%"
               />
             </a>
           </>
         </InstagramImageTwo>
         <InstagramImageThree>
           <>
-            <a href="/" target="_blank" rel="noreferrer">
+            <a href={images[2].permalink} target="_blank" rel="noreferrer">
               <NextImage
-                src="/images/pink-rings.jpeg"
-                width="100%"
-                height="100%"
+                src={images[2].media_url}
+                alt={images[2].caption}
                 layout="responsive"
                 objectFit="cover"
+                width="100%"
+                height="100%"
               />
             </a>
           </>
