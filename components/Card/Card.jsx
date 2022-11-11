@@ -43,6 +43,7 @@ const StyledProductImg = styled.div`
 const ProductTitle = styled.p`
   font-size: 16px;
   margin: 0;
+  margin-top: 1rem;
   text-transform: uppercase;
   text-align: center;
 
@@ -88,7 +89,7 @@ const ProductSize = styled.div`
   }
 `;
 
-function Card({ necklace }) {
+function Card({ necklace, ring }) {
   const { picture, title, price, productText, productSize } = necklace.fields;
   return (
     <div>
