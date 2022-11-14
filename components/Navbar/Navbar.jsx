@@ -85,11 +85,13 @@ const NavItem = styled.a`
     text-decoration: underline;
     font-style: normal;
   }
+  cursor: pointer;
 `;
 const Logo = styled.img`
   height: 120px;
   width: auto;
   padding-bottom: 10px;
+  cursor: pointer;
 `;
 
 const Navbar = ({ text, href, active }) => {

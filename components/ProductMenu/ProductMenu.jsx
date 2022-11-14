@@ -4,24 +4,41 @@ import { useRouter } from "next/router";
 
 const BoldText = styled.button`
   font-family: "RedHatDisplayBold";
-  font-size: 20px;
+  font-size: 16px;
   padding: 20px;
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 992px) {
+  }
 `;
 
 const TextWrapper = styled.div`
   text-align: center;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   display: grid;
   list-style-type: none;
-  flex-direction: column;
+  flex-direction: row;
   width: 100vw;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  grid-template-columns: repeat(5, 1fr);
   box-sizing: border-box;
   -moz-box-sizing: border-box;
+  overflow: auto;
+  display: flex;
   -webkit-box-sizing: border-box;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  @media screen and (min-width: 992px) {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    grid-template-columns: repeat(5, 1fr);
+    display: grid;
+    justify-content: space-between;
+  }
 `;
 
 const ProductMenu = () => {

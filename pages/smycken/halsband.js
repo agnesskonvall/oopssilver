@@ -1,12 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import MobileNavbar from "../../components/MobileNavbar/MobileNavBar";
 import Footer from "../../components/Footer/Footer";
-import InstagramSection from "../../components/InstagramSection/InstagramSection";
 import Card from "../../components/Card/Card";
-
+import Circles from "../../components/Circles/Circles";
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 import ProductMenu from "../../components/ProductMenu/ProductMenu";

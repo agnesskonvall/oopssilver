@@ -9,11 +9,8 @@ import Card from "../../components/Card/Card";
 import Hero from "../../components/Hero/Hero";
 import Circles from "../../components/Circles/Circles";
 import { createClient } from "contentful";
-import { useState, useEffect } from "react";
 import ProductMenu from "../../components/ProductMenu/ProductMenu";
-
-// const router = useRouter();
-// const query = router.query;
+import { useState, useEffect } from "react";
 
 export async function getStaticProps() {
   const client = createClient({

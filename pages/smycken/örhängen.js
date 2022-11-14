@@ -7,7 +7,6 @@ import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/Card";
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
-import ProductMenu from "../../components/ProductMenu/ProductMenu";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -20,22 +19,19 @@ export async function getStaticProps() {
   });
   return {
     props: {
-      products: res.items,
+      rings: res.items,
     },
   };
 }
 
-export default function Rings({ products }) {
+export default function Rings({ rings }) {
   return (
     <div className={styles.container}>
       <Navbar></Navbar>
       <MobileNavbar></MobileNavbar>
-      <ProductMenu></ProductMenu>
-      <div>
-        {products.map((product) => (
-          <Card product={product} key={product.sys.id} />
-        ))}
-      </div>
+      {rings.map((ring) => (
+        <Card key={ring.sys.id} ring={ring} />
+      ))}
       <Footer></Footer>
     </div>
   );

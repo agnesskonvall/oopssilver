@@ -84,7 +84,6 @@ const ProductSize = styled.div`
 
 function Card({ product }) {
   const { picture, title, price, productText, productSize } = product.fields;
-
   return (
     <div>
       <CardWrapper>
