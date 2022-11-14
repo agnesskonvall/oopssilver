@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/Card";
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
+import ProductMenu from "../../components/ProductMenu/ProductMenu";
 
 export async function getStaticProps() {
   const client = createClient({
