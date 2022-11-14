@@ -89,8 +89,8 @@ const ProductSize = styled.div`
   }
 `;
 
-function Card({ necklace, ring }) {
-  const { picture, title, price, productText, productSize } = necklace.fields;
+function Card({ product }) {
+  const { picture, title, price, productText, productSize } = product.fields;
   return (
     <div>
       <CardWrapper>

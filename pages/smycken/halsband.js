@@ -18,18 +18,18 @@ export async function getStaticProps() {
   });
   return {
     props: {
-      necklaces: res.items,
+      products: res.items,
     },
   };
 }
 
-export default function Necklaces({ necklaces }) {
+export default function Necklaces({ products }) {
   return (
     <div className={styles.container}>
       <Navbar></Navbar>
       <MobileNavbar></MobileNavbar>
-      {necklaces.map((necklace) => (
-        <Card key={necklace.sys.id} necklace={necklace} />
+      {products.map((product) => (
+        <Card key={product.sys.id} product={product} />
       ))}
       <Footer></Footer>
     </div>

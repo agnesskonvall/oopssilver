@@ -27,9 +27,6 @@ const TextWrapper = styled.div`
   -webkit-box-sizing: border-box;
   flex-wrap: wrap;
 
-  .center {
-  }
-
   @media screen and (min-width: 768px) {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -49,9 +46,7 @@ const ProductMenu = ({ text, href, active }) => {
       <BoldText href="/smycken/ringar">RINGAR</BoldText>
       <BoldText href="/smycken/örhängen">ÖRHÄNGEN</BoldText>
       <BoldText href="/smycken/halsband">HALSBAND</BoldText>
-      <BoldText className="center" href="/smycken/armband">
-        ARMBAND
-      </BoldText>
+      <BoldText href="/smycken/armband">ARMBAND</BoldText>
       <BoldText href="/smycken/statement">STATEMENT</BoldText>
     </TextWrapper>
   );
