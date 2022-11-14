@@ -12,24 +12,6 @@ import Circles from "../components/Circles/Circles";
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 
-// export async function getStaticProps() {
-//   const client = createClient({
-//     space: process.env.CONTENTFUL_SPACE_ID,
-//     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-//   });
-
-//   const res = await client.getEntries({
-//     content_type: "rings",
-//   });
-//   return {
-//     props: {
-//       rings: res.items,
-//     },
-//   };
-// }
-
-
-
 export const getStaticProps = async () => {
   const url = `https://graph.instagram.com/me/media?fields=id,username,media_url,caption,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
   const instagramData = await fetch(url);
@@ -46,7 +28,6 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ images }) {
-
   return (
     <div className={styles.container}>
       <Navbar></Navbar>
@@ -56,7 +37,6 @@ export default function Home({ images }) {
         <Card key={ring.sys.id} ring={ring} />
       ))} */}
       {/* <Circles></Circles> */}
-      <InstagramSection></InstagramSection>
       {/* <ProductMenu></ProductMenu> */}
       <InstagramSection images={images} />
       <Footer></Footer>

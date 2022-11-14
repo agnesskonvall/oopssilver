@@ -4,12 +4,12 @@ import styles from "../../styles/Home.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import MobileNavbar from "../../components/MobileNavbar/MobileNavBar";
 import Footer from "../../components/Footer/Footer";
-import InstagramSection from "../components/InstagramSection/InstagramSection";
+import InstagramSection from "../../components/InstagramSection/InstagramSection";
 import Card from "../../components/Card/Card";
-import Hero from "../components/Hero/Hero";
-import Circles from "../components/Circles/Circles";
+
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
+import ProductMenu from "../../components/ProductMenu/ProductMenu";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -22,18 +22,19 @@ export async function getStaticProps() {
   });
   return {
     props: {
-      necklaces: res.items,
+      products: res.items,
     },
   };
 }
 
-export default function Necklaces({ necklaces }) {
+export default function Necklaces({ products }) {
   return (
     <div className={styles.container}>
       <Navbar></Navbar>
       <MobileNavbar></MobileNavbar>
-      {necklaces.map((necklace) => (
-        <Card key={necklace.sys.id} necklace={necklace} />
+      <ProductMenu></ProductMenu>
+      {products.map((product) => (
+        <Card key={product.sys.id} product={product} />
       ))}
       <Footer></Footer>
     </div>

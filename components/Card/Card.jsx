@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
-
 const CardWrapper = styled.div`
   height: 260px;
   width: 170px;
@@ -14,7 +13,6 @@ const CardWrapper = styled.div`
   flex-direction: column;
   margin: 3rem;
   font-family: "RedHatDisplay";
-
   @media screen and (min-width: 768px) {
     height: 430px;
     width: 270px;
@@ -23,7 +21,6 @@ const CardWrapper = styled.div`
 
 const TextWrapper = styled.div`
   height: 40%;
-
   @media screen and (min-width: 768px) {
     height: 40%;
   }
@@ -46,7 +43,6 @@ const ProductTitle = styled.p`
   margin-top: 1rem;
   text-transform: uppercase;
   text-align: center;
-
   @media screen and (min-width: 768px) {
     font-size: 24px;
   }
@@ -56,7 +52,6 @@ const ProductPrice = styled.p`
   font-size: 10px;
   margin: 0;
   text-align: center;
-
   @media screen and (min-width: 768px) {
     font-size: 14px;
   }
@@ -67,7 +62,6 @@ const ProductText = styled.p`
   margin: 0;
   margin-top: 0.2rem;
   text-align: center;
-
   @media screen and (min-width: 768px) {
     font-size: 14px;
     padding: 1rem;
@@ -81,7 +75,6 @@ const ProductSize = styled.div`
   font-size: 10px;
   text-align: center;
   margin: 0;
-
   @media screen and (min-width: 768px) {
     font-size: 14px;
     padding-left: 1rem;
@@ -89,8 +82,9 @@ const ProductSize = styled.div`
   }
 `;
 
-function Card({ necklace, ring }) {
-  const { picture, title, price, productText, productSize } = necklace.fields;
+function Card({ product }) {
+  const { picture, title, price, productText, productSize } = product.fields;
+
   return (
     <div>
       <CardWrapper>

@@ -12,6 +12,9 @@ import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 import ProductMenu from "../../components/ProductMenu/ProductMenu";
 
+// const router = useRouter();
+// const query = router.query;
+
 export async function getStaticProps() {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -19,7 +22,7 @@ export async function getStaticProps() {
   });
 
   const res = await client.getEntries({
-    content_type: "rings",
+    content_type: "earrings",
   });
   return {
     props: {
@@ -28,7 +31,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Rings({ products }) {
+export default function Earrings({ products }) {
   return (
     <div className={styles.container}>
       <Navbar></Navbar>

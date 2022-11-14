@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 
-const BoldText = styled.a`
+const BoldText = styled.button`
   font-family: "RedHatDisplayBold";
   font-size: 20px;
   padding: 20px;
@@ -23,14 +24,25 @@ const TextWrapper = styled.div`
   -webkit-box-sizing: border-box;
 `;
 
-const ProductMenu = ({ text, href, active }) => {
+const ProductMenu = () => {
+  const router = useRouter();
   return (
     <TextWrapper>
-      <BoldText href="/smycken/ringar">RINGAR</BoldText>
-      <BoldText href="/smycken/örhängen">ÖRHÄNGEN</BoldText>
-      <BoldText href="/smycken/halsband">HALSBAND</BoldText>
-      <BoldText href="/smycken/armband">ARMBAND</BoldText>
-      <BoldText href="/smycken/statement">STATEMENT</BoldText>
+      <BoldText type="button" onClick={() => router.push("/smycken/ringar")}>
+        RINGAR
+      </BoldText>
+      <BoldText type="button" onClick={() => router.push("/smycken/orhangen")}>
+        ÖRHÄNGEN
+      </BoldText>
+      <BoldText type="button" onClick={() => router.push("/smycken/halsband")}>
+        HALSBAND
+      </BoldText>
+      <BoldText type="button" onClick={() => router.push("/smycken/armband")}>
+        ARMBAND
+      </BoldText>
+      <BoldText type="button" onClick={() => router.push("/smycken/statement")}>
+        STATEMENT
+      </BoldText>
     </TextWrapper>
   );
 };
