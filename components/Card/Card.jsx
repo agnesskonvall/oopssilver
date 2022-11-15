@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CardWrapper = styled.div`
-  height: 260px;
+  height: 290px;
   width: 170px;
   background-color: beige;
   border: #15762a solid 5px;
@@ -12,8 +12,9 @@ const CardWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 1rem;
   font-family: "RedHatDisplay";
+  margin-bottom: 1rem;
+
   @media screen and (min-width: 768px) {
     height: 430px;
     width: 270px;
@@ -42,7 +43,7 @@ const StyledProductImg = styled.div`
 const ProductTitle = styled.p`
   font-size: 16px;
   margin: 0;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   text-transform: uppercase;
   text-align: center;
   @media screen and (min-width: 768px) {

@@ -8,6 +8,7 @@ const BoldText = styled.button`
   padding: 20px;
   border: none;
   background-color: #fcfff4;
+  color: black;
   cursor: pointer;
   &:focus,
   :hover {

@@ -11,6 +11,7 @@ import ProductMenu from "../components/ProductMenu/ProductMenu";
 import Circles from "../components/Circles/Circles";
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
+import styled from "styled-components";
 
 export const getStaticProps = async () => {
   const url = `https://graph.instagram.com/me/media?fields=id,username,media_url,caption,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
@@ -32,6 +33,27 @@ export const getStaticProps = async () => {
   };
 };
 
+const GridWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+`;
+
+const TitleText = styled.h2`
+  text-align: center;
+  font-weight: bold;
+  text-align: center;
+  font-family: "RedHatDisplayBold";
+
+  @media screen and (min-width: 992px) {
+    font-size: 36px;
+  }
+`;
+
 export default function Home({ products, images }) {
   console.log(products);
   return (
@@ -39,12 +61,13 @@ export default function Home({ products, images }) {
       <Navbar></Navbar>
       <MobileNavbar></MobileNavbar>
       <Hero></Hero>
-      <div>
+      <TitleText>BÄSTSÄLJARE</TitleText>
+      <GridWrapper>
         {products.map((product) => (
           <Card product={product} key={product.sys.id} />
         ))}
-      </div>
-      {/* <Circles></Circles> */}
+      </GridWrapper>
+      <Circles></Circles>
       <InstagramSection images={images} />
       <Footer></Footer>
     </div>
