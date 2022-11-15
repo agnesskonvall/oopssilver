@@ -29,6 +29,7 @@ const Logo = styled.img`
 
 const TitleText = styled.h1`
   font-size: 26px;
+  font-family: "RedHatDisplay";
 `;
 
 const SocialMediaLink = styled.img`
