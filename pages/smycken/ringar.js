@@ -8,6 +8,7 @@ import Card from "../../components/Card/Card";
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 import ProductMenu from "../../components/ProductMenu/ProductMenu";
+import ProductGrid from "../../components/ProductGrid/ProductGrid";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -31,11 +32,12 @@ export default function Rings({ products }) {
       <Navbar></Navbar>
       <MobileNavbar></MobileNavbar>
       <ProductMenu></ProductMenu>
-      <div>
+      <ProductGrid>
+        {" "}
         {products.map((product) => (
           <Card product={product} key={product.sys.id} />
         ))}
-      </div>
+      </ProductGrid>
       <Footer></Footer>
     </div>
   );

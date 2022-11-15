@@ -6,6 +6,15 @@ const BoldText = styled.button`
   font-family: "RedHatDisplayBold";
   font-size: 16px;
   padding: 20px;
+  border: none;
+  background-color: #fcfff4;
+  cursor: pointer;
+  &:focus,
+  :hover {
+    text-decoration: underline;
+    font-style: normal;
+  }
+  overflow-y: hidden;
   @media screen and (min-width: 768px) {
     font-size: 20px;
   }
@@ -27,6 +36,7 @@ const TextWrapper = styled.div`
   display: flex;
   -webkit-box-sizing: border-box;
   flex-wrap: wrap;
+  margin-top: 1rem;
 
   @media screen and (min-width: 768px) {
     padding-left: 5rem;

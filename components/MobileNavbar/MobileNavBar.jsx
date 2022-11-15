@@ -112,7 +112,7 @@ const MobileNavbar = ({ text, href, active }) => {
       {openMenu && (
         <NavWrapper>
           <NavList>
-            <Link href={"/smycken"}>
+            <Link href={"/smycken/ringar"}>
               <NavItem className="one">SMYCKEN</NavItem>
             </Link>
             <Link href={"/faq"}>
