@@ -18,24 +18,33 @@ export const getStaticProps = async () => {
   const feed = await instagramData.json();
   const images = feed.data;
 
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
+  const res = await client.getEntries();
+
   return {
     props: {
       images,
+      products: res.items,
     },
   };
 };
 
-export default function Home({ images }) {
+export default function Home({ products, images }) {
+  console.log(products);
   return (
     <div className={styles.container}>
       <Navbar></Navbar>
       <MobileNavbar></MobileNavbar>
       <Hero></Hero>
-      {/* {rings.map((ring) => (
-        <Card key={ring.sys.id} ring={ring} />
-      ))} */}
+      <div>
+        {products.map((product) => (
+          <Card product={product} key={product.sys.id} />
+        ))}
+      </div>
       {/* <Circles></Circles> */}
-      {/* <ProductMenu></ProductMenu> */}
       <InstagramSection images={images} />
       <Footer></Footer>
     </div>
