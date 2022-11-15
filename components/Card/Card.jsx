@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
+
 const CardWrapper = styled.div`
   height: 260px;
   width: 170px;
