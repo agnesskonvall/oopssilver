@@ -29,6 +29,7 @@ const Logo = styled.img`
 
 const TitleText = styled.h1`
   font-size: 26px;
+  font-family: "RedHatDisplay";
 `;
 
 const SocialMediaLink = styled.img`
@@ -92,7 +93,7 @@ const MobileNavbar = ({ text, href, active }) => {
     <MobileNav>
       <NavContainer>
         <NavContainer>
-          <Logo src="/logo.svg"></Logo>
+          <Logo src="/logo.svg" href="/"></Logo>
           <TitleText href={"/"}>OOPS Silver</TitleText>{" "}
         </NavContainer>
         {!openMenu && (
