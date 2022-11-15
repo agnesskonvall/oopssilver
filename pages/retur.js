@@ -9,6 +9,11 @@ import ReturnSection from "../components/ReturnSection/ReturnSection";
 export default function Home() {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Retur - OOPS Silver</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="shortcut icon" href="/favicon.svg" />
+      </Head>
       <Navbar></Navbar>
       <MobileNavbar></MobileNavbar>
       <ReturnSection></ReturnSection>
