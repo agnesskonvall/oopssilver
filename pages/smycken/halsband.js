@@ -33,6 +33,7 @@ const GridWrapper = styled.div`
     grid-template-columns: repeat(4, 1fr);
   }
 `;
+
 export default function Necklaces({ products }) {
   return (
     <div className={styles.container}>

@@ -29,6 +29,7 @@ export async function getStaticProps() {
 const GridWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
 
   @media screen and (min-width: 992px) {
     grid-template-columns: repeat(4, 1fr);
