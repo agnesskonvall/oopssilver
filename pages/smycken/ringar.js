@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styled from "styled-components";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 import Navbar from "../../components/Navbar/Navbar";
@@ -26,18 +27,25 @@ export async function getStaticProps() {
   };
 }
 
+const GridWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+`;
+
 export default function Rings({ products }) {
   return (
     <div className={styles.container}>
       <Navbar></Navbar>
       <MobileNavbar></MobileNavbar>
       <ProductMenu></ProductMenu>
-      <ProductGrid>
+      <GridWrapper>
         {" "}
         {products.map((product) => (
           <Card product={product} key={product.sys.id} />
         ))}
-      </ProductGrid>
+      </GridWrapper>
       <Footer></Footer>
     </div>
   );
