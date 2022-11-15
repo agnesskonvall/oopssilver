@@ -93,7 +93,7 @@ const MobileNavbar = ({ text, href, active }) => {
     <MobileNav>
       <NavContainer>
         <NavContainer>
-          <Logo src="/logo.svg"></Logo>
+          <Logo src="/logo.svg" href="/"></Logo>
           <TitleText href={"/"}>OOPS Silver</TitleText>{" "}
         </NavContainer>
         {!openMenu && (
