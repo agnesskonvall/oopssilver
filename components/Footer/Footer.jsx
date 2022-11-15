@@ -126,10 +126,10 @@ function Footer() {
         </h2>
       </InfoWrapper>
       <IconWrapper className="one">
-        <a href="https://facebook.com/">
+        <a href="https://www.facebook.com/profile.php?id=100028578145139">
           <StyledIcons src="/facebook-icon.svg"></StyledIcons>
         </a>
-        <a href="https://instagram.com/">
+        <a href="https://instagram.com/oops_silver">
           <StyledIcons src="/instagram-icon.svg"></StyledIcons>
         </a>
       </IconWrapper>
