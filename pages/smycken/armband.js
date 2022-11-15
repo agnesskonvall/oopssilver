@@ -11,6 +11,7 @@ import Circles from "../../components/Circles/Circles";
 import { createClient } from "contentful";
 import ProductMenu from "../../components/ProductMenu/ProductMenu";
 import { useState, useEffect } from "react";
+import styled from "styled-components";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -27,6 +28,18 @@ export async function getStaticProps() {
     },
   };
 }
+const GridWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  /* @media screen and (min-width: 425px) {
+    margin-left: 2rem;
+  } */
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+`;
 
 export default function Bracelets({ products }) {
   return (
@@ -34,11 +47,11 @@ export default function Bracelets({ products }) {
       <Navbar></Navbar>
       <MobileNavbar></MobileNavbar>
       <ProductMenu></ProductMenu>
-      <div>
+      <GridWrapper>
         {products.map((product) => (
           <Card product={product} key={product.sys.id} />
         ))}
-      </div>
+      </GridWrapper>
       <Footer></Footer>
     </div>
   );

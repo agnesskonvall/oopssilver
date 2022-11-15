@@ -9,7 +9,6 @@ import Card from "../../components/Card/Card";
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 import ProductMenu from "../../components/ProductMenu/ProductMenu";
-import ProductGrid from "../../components/ProductGrid/ProductGrid";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -29,9 +28,11 @@ export async function getStaticProps() {
 
 const GridWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;
 
 export default function Rings({ products }) {
@@ -41,7 +42,6 @@ export default function Rings({ products }) {
       <MobileNavbar></MobileNavbar>
       <ProductMenu></ProductMenu>
       <GridWrapper>
-        {" "}
         {products.map((product) => (
           <Card product={product} key={product.sys.id} />
         ))}

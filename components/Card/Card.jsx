@@ -12,7 +12,7 @@ const CardWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 3rem;
+  margin: 1rem;
   font-family: "RedHatDisplay";
   @media screen and (min-width: 768px) {
     height: 430px;
@@ -21,6 +21,7 @@ const CardWrapper = styled.div`
 `;
 
 const TextWrapper = styled.div`
+  padding: 0.3rem;
   height: 40%;
   @media screen and (min-width: 768px) {
     height: 40%;

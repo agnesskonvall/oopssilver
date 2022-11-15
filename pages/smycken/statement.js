@@ -8,6 +8,7 @@ import Card from "../../components/Card/Card";
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 import ProductMenu from "../../components/ProductMenu/ProductMenu";
+import styled from "styled-components";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -25,17 +26,26 @@ export async function getStaticProps() {
   };
 }
 
+const GridWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+`;
+
 export default function Statement({ products }) {
   return (
     <div className={styles.container}>
       <Navbar></Navbar>
       <MobileNavbar></MobileNavbar>
       <ProductMenu></ProductMenu>
-      <div>
+      <GridWrapper>
         {products.map((product) => (
           <Card product={product} key={product.sys.id} />
         ))}
-      </div>
+      </GridWrapper>
       <Footer></Footer>
     </div>
   );
