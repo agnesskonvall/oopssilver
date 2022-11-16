@@ -23,7 +23,9 @@ export const getStaticProps = async () => {
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
-  const res = await client.getEntries();
+  const res = await client.getEntries({
+    content_type: "bestsellers",
+  });
 
   return {
     props: {
@@ -55,7 +57,6 @@ const TitleText = styled.h2`
 `;
 
 export default function Home({ products, images }) {
-  console.log(products);
   return (
     <div className={styles.container}>
       <Head>

@@ -8,6 +8,7 @@ import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 import ProductMenu from "../../components/ProductMenu/ProductMenu";
 import styled from "styled-components";
+import Head from "next/head";
 
 export async function getStaticProps() {
   const client = createClient({
