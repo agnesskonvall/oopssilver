@@ -5,7 +5,7 @@ import Link from "next/link";
 const CardWrapper = styled.div`
   height: 290px;
   width: 170px;
-  background-color: beige;
+  background-color: #fcfff4;
   border: #15762a solid 5px;
   border-radius: 10px;
   display: flex;
@@ -13,7 +13,7 @@ const CardWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   font-family: "RedHatDisplay";
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
   @media screen and (min-width: 768px) {
     height: 430px;

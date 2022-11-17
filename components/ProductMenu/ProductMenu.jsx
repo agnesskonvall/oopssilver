@@ -37,7 +37,8 @@ const TextWrapper = styled.div`
   display: flex;
   -webkit-box-sizing: border-box;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 
   @media screen and (min-width: 768px) {
     padding-left: 5rem;

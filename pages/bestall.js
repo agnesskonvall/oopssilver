@@ -4,6 +4,7 @@ import MobileNavbar from "../components/MobileNavbar/MobileNavBar";
 import Footer from "../components/Footer/Footer";
 import OrderSection from "../components/OrderSection/OrderSection";
 import FormSection from "../components/Form/Form";
+import Head from "next/head";
 
 export default function Home() {
   return (

@@ -4,13 +4,21 @@ import Image from "next/image";
 
 const ContactWrapper = styled.div`
   display: grid;
+  align-items: center;
   list-style-type: none;
   flex-direction: column;
   width: 100vw;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 992px) {
+  }
 `;
 
 const BoldText = styled.h2`
@@ -24,23 +32,35 @@ const Text = styled.p`
 `;
 
 const TextWrapper = styled.div`
-  width: 60%;
-  margin-left: 1rem;
-  margin: 4rem;
+  margin: 2rem;
 
   .info {
     text-align: center;
   }
+
+  @media screen and (min-width: 768px) {
+    width: 60%;
+    margin-left: 1rem;
+    margin: 4rem;
+  }
+
+  @media screen and (min-width: 992px) {
+  }
 `;
 
 const AboutText = styled.div``;
-const ContactText = styled.div``;
+
+const ContactText = styled.div`
+  margin-top: 2rem;
+  p {
+    margin: 0;
+  }
+`;
 
 const ImageWrapper = styled.div`
   align-items: center;
   position: relative;
-  margin-left: 3rem;
-  margin-bottom: 1rem;
+  margin: 2rem;
 
   @media screen and (min-width: 768px) {
     margin-top: 1.5rem;
@@ -50,6 +70,8 @@ const ImageWrapper = styled.div`
     width: 35rem;
     height: auto;
     padding: 2rem;
+    margin: 0;
+    margin-left: 3rem;
   }
 `;
 

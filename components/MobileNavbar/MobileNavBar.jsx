@@ -3,7 +3,7 @@ import styled from "styled-components";
 import React, { useState } from "react";
 
 const MobileNav = styled.nav`
-  background-color: beige;
+  background-color: #fcfff4;
   color: #1e1e1e;
   display: block;
   gap: 5vh;
@@ -25,11 +25,13 @@ const Logo = styled.img`
   height: 80px;
   width: auto;
   padding: 1rem;
+  cursor: pointer;
 `;
 
 const TitleText = styled.h1`
   font-size: 26px;
   font-family: "RedHatDisplay";
+  cursor: pointer;
 `;
 
 const SocialMediaLink = styled.img`
@@ -52,7 +54,7 @@ const NavList = styled.div`
   height: 50%;
   margin: 0;
   z-index: 10;
-  background-color: beige;
+  background-color: #fcfff4;
   margin-top: 2rem;
   font-size: 20px;
   text-align: end;
@@ -93,8 +95,12 @@ const MobileNavbar = ({ text, href, active }) => {
     <MobileNav>
       <NavContainer>
         <NavContainer>
-          <Logo src="/logo.svg" href="/"></Logo>
-          <TitleText href={"/"}>OOPS Silver</TitleText>{" "}
+          <Link href={"/"}>
+            <Logo src="/logo.svg"></Logo>
+          </Link>
+          <Link href={"/"}>
+            <TitleText>OOPS Silver</TitleText>
+          </Link>
         </NavContainer>
         {!openMenu && (
           <HamburgerIcon

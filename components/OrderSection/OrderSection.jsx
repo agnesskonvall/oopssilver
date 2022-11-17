@@ -32,10 +32,17 @@ const TextWrapper = styled.div`
   list-style-type: none;
   flex-direction: column;
   width: 100vw;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const SectionWrapper = styled.div`

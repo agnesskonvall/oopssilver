@@ -53,7 +53,7 @@ const ImageWrapper = styled.div`
   height: 20rem;
   align-items: center;
   position: relative;
-  margin-left: 3rem;
+  margin-left: 1.5rem;
   margin-bottom: 1rem;
 
   @media screen and (min-width: 768px) {
