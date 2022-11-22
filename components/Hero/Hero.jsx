@@ -115,7 +115,7 @@ function Hero() {
       </HeroImageWrapperMobile>
       <HeroImageWrapperDesktop>
         <Image
-          src="/hero.png"
+          src="/hero3.jpeg"
           layout="fill"
           object-fit="contain"
           alt="heroimage"

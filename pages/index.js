@@ -41,6 +41,10 @@ const GridWrapper = styled.div`
   justify-items: center;
 
   @media screen and (min-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1439px) {
     grid-template-columns: repeat(4, 1fr);
   }
 `;

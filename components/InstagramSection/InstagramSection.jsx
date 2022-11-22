@@ -84,6 +84,7 @@ const TextBox = styled.div`
 
 const InstagramLink = styled.a`
   font-size: 26px;
+  text-decoration: underline;
 
   &:focus,
   :hover {
@@ -92,7 +93,6 @@ const InstagramLink = styled.a`
   }
 `;
 const InstagramSection = ({ images }) => {
-
   return (
     <InstagramContainer>
       <InstagramTextContainer>

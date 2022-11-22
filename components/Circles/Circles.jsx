@@ -4,9 +4,9 @@ import styled from "styled-components";
 
 const CirclesWrapper = styled.div`
   width: 100%;
-  height: 20rem;
+  height: 15rem;
   position: relative;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 `;
 
 const CirclesWrapperDesktop = styled.div`
