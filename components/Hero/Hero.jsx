@@ -24,7 +24,7 @@ const HeroHeading = styled.h1`
 const HeroHeadingWrapper = styled.div`
   height: 100px;
   width: 100%;
-  background-color: #d9d9d960;
+  background-color: #d9d9d9de;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,6 +32,7 @@ const HeroHeadingWrapper = styled.div`
   @media screen and (min-width: 992px) {
     height: 120px;
     width: 90%;
+    background-color: #d9d9d988;
   }
 `;
 const HeroText = styled.p`
@@ -46,7 +47,7 @@ const HeroText = styled.p`
 const HeroTextWrapper = styled.div`
   height: 150px;
   width: 100%;
-  background-color: #d9d9d960;
+  background-color: #d9d9d9de;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,6 +55,7 @@ const HeroTextWrapper = styled.div`
   @media screen and (min-width: 992px) {
     height: 140px;
     width: 95%;
+    background-color: #d9d9d988;
   }
 `;
 

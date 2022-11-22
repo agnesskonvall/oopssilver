@@ -16,6 +16,10 @@ const InstagramContainer = styled.div`
   }
 `;
 const InstagramTextContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   @media screen and (min-width: 768px) {
     grid-column: 1/3;
     grid-row: 1;
@@ -89,7 +93,7 @@ const TextBox = styled.div`
 `;
 
 const InstagramLink = styled.a`
-  font-size: 26px;
+  font-size: 36px;
   text-decoration: underline;
 
   &:focus,
@@ -102,9 +106,6 @@ const InstagramSection = ({ images }) => {
   return (
     <InstagramContainer>
       <InstagramTextContainer>
-        <TextBox>
-          <Text>OOPS Silver finns såklart på Instagram!</Text>
-        </TextBox>
         <InstagramLink
           href="https://www.instagram.com/oops_silver/"
           target="_blank"

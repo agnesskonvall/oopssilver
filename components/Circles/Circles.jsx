@@ -16,7 +16,7 @@ const CirclesWrapper = styled.div`
 const CirclesWrapperDesktop = styled.div`
   position: relative;
   width: 100%;
-  height: 100px;
+  height: 80px;
   /* display: none; */
 
   @media screen and (min-width: 992px) {
