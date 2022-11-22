@@ -5,6 +5,7 @@ import Image from "next/image";
 const ContactWrapper = styled.div`
   display: grid;
   list-style-type: none;
+  align-items: center;
   flex-direction: column;
   width: 100vw;
   grid-template-columns: repeat(2, 1fr);

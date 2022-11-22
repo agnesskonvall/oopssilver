@@ -41,6 +41,12 @@ const FooterWrapper = styled.footer`
   }
   .five {
     grid-column: 5;
+    cursor: pointer;
+
+    &:focus,
+    :hover {
+      text-decoration: underline;
+    }
   }
 
   .StyledText {
@@ -104,6 +110,7 @@ function Footer() {
         <StyledLogo
           className="three"
           src="/circle-footer-mobile.svg"
+          alt="logo image"
         ></StyledLogo>
       </LogoWrapper>
       <InfoWrapper className="two">
@@ -121,16 +128,22 @@ function Footer() {
         </a>
       </InfoWrapper>
       <InfoWrapper className="five">
-        <h2 className="StyledReturn StyledText" href="/retur">
-          RETUR
-        </h2>
+        <Link href={"/retur"}>
+          <h2 className="StyledReturn StyledText">RETUR</h2>
+        </Link>
       </InfoWrapper>
       <IconWrapper className="one">
-        <a href="https://www.facebook.com/profile.php?id=100028578145139">
-          <StyledIcons src="/facebook-icon.svg"></StyledIcons>
+        <a href="https://facebook.com/">
+          <StyledIcons
+            src="/facebook-icon.svg"
+            alt="facebook icon"
+          ></StyledIcons>
         </a>
-        <a href="https://instagram.com/oops_silver">
-          <StyledIcons src="/instagram-icon.svg"></StyledIcons>
+        <a href="https://instagram.com/">
+          <StyledIcons
+            src="/instagram-icon.svg"
+            alt="instagram icon"
+          ></StyledIcons>
         </a>
       </IconWrapper>
     </FooterWrapper>
