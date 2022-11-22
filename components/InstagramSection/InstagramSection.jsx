@@ -5,7 +5,7 @@ import NextImage from "next/image";
 
 const InstagramContainer = styled.div`
   font-family: "RedHatDisplay";
-  padding: 30px 20px 32px 20px;
+  padding: 20px;
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -73,6 +73,12 @@ const InstagramImageThree = styled(InstagramImage)`
 
 const Text = styled.p`
   font-size: 36px;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 768px) {
+    margin: 36px 0px 36px 0px;
+  }
 `;
 
 const TextBox = styled.div`
