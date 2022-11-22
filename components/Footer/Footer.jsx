@@ -116,7 +116,9 @@ function Footer() {
       <InfoWrapper className="two">
         <h2 className="StyledText">KONTAKT</h2>
         <p className="StyledText">tel: 0704 59 93 24</p>
-        <p className="StyledText">karin@oopssilver.se</p>
+        <p className="StyledText" href="mailto:karin@oopssilver.se">
+          karin@oopssilver.se
+        </p>
       </InfoWrapper>
       <InfoWrapper className="four">
         <h2 className="StyledText">ÅTERFÖRSÄLJARE</h2>
@@ -133,13 +135,13 @@ function Footer() {
         </Link>
       </InfoWrapper>
       <IconWrapper className="one">
-        <a href="https://facebook.com/">
+        <a href="https://www.facebook.com/profile.php?id=100028578145139">
           <StyledIcons
             src="/facebook-icon.svg"
             alt="facebook icon"
           ></StyledIcons>
         </a>
-        <a href="https://instagram.com/">
+        <a href="https://instagram.com/oops_silver">
           <StyledIcons
             src="/instagram-icon.svg"
             alt="instagram icon"

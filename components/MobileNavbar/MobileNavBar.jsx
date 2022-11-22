@@ -133,10 +133,14 @@ const MobileNavbar = ({ text, href, active }) => {
             </Link>
             <SocialMediaContainer>
               <SocialMediaLink
+                href="https://www.facebook.com/profile.php?id=100028578145139"
                 className="facebook"
                 src="/facebook.svg"
               ></SocialMediaLink>
-              <SocialMediaLink src="/instagram.svg"></SocialMediaLink>
+              <SocialMediaLink
+                src="/instagram.svg"
+                href="https://instagram.com/oops_silver"
+              ></SocialMediaLink>
             </SocialMediaContainer>
           </NavList>
         </NavWrapper>
