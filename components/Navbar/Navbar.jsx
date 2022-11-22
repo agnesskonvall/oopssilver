@@ -30,6 +30,7 @@ const Nav = styled.nav`
     padding-bottom: 18vh;
     border-color: black;
     border-style: solid;
+    justify-items: center;
   }
   @media screen and (min-width: 992px) {
     box-sizing: border-box;
@@ -53,7 +54,7 @@ const Nav = styled.nav`
     gap: 100px;
     align-items: center;
     text-align: center;
-
+    justify-items: center;
     padding-top: 5vh;
     padding-bottom: 15vh;
   }
