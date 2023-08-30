@@ -118,8 +118,6 @@ const InstagramSection = ({}) => {
           Följ @oops_silver <br></br> på Instagram
         </InstagramLink>
       </InstagramTextContainer>
-      {/* <figure data-behold-id="FLLaLeqp4AOg5Nn7Hk4f"></figure> */}
-      {/* <script src="https://w.behold.so/widget.js" type="module"></script> */}
       <InstagramImageContainer>
         <figure data-behold-id="FLLaLeqp4AOg5Nn7Hk4f"></figure>
         <script src="https://w.behold.so/widget.js" type="module"></script>
