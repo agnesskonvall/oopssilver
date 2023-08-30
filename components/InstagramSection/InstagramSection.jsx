@@ -15,11 +15,6 @@ const InstagramContainer = styled.div`
   gap: 1rem;
   @media screen and (min-width: 768px) {
     flex-direction: row;
-    /* display: flex;
-    align-items: center; */
-    /* grid-template-rows: repeat(2, 1fr); */
-    /* padding: 30px 32px 32px 32px; */
-    /* padding-top: 0; */
   }
   @media screen and (min-width: 992px) {
     flex-direction: row;
