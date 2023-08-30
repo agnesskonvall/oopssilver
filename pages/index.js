@@ -14,10 +14,10 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 export const getStaticProps = async () => {
-  const url = `https://graph.instagram.com/me/media?fields=id,username,media_url,caption,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
-  const instagramData = await fetch(url);
-  const feed = await instagramData.json();
-  const images = feed.data;
+  // const url = `https://graph.instagram.com/me/media?fields=id,username,media_url,caption,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
+  // const instagramData = await fetch(url);
+  // const feed = await instagramData.json();
+  // const images = feed.data;
 
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -29,7 +29,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      images,
+      // images,
       products: res.items,
     },
   };
@@ -78,7 +78,7 @@ export default function Home({ products, images }) {
         ))}
       </GridWrapper>
       <Circles></Circles>
-      <InstagramSection images={images} />
+      <InstagramSection />
       <Footer></Footer>
     </div>
   );

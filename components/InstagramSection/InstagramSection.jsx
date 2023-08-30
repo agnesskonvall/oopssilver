@@ -5,14 +5,24 @@ import NextImage from "next/image";
 
 const InstagramContainer = styled.div`
   font-family: "RedHatDisplay";
+  width: 100%;
+  height: 100%;
   padding: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
   @media screen and (min-width: 768px) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 30px 32px 32px 32px;
-    padding-top: 0;
+    flex-direction: row;
+    /* display: flex;
+    align-items: center; */
+    /* grid-template-rows: repeat(2, 1fr); */
+    /* padding: 30px 32px 32px 32px; */
+    /* padding-top: 0; */
   }
   @media screen and (min-width: 992px) {
+    flex-direction: row;
   }
 `;
 const InstagramTextContainer = styled.div`
@@ -21,23 +31,22 @@ const InstagramTextContainer = styled.div`
   align-items: center;
   text-align: center;
   @media screen and (min-width: 768px) {
-    grid-column: 1/3;
-    grid-row: 1;
+    width: 40%;
   }
   @media screen and (min-width: 992px) {
+    width: 40%;
   }
 `;
 const InstagramImageContainer = styled.div`
   width: 100%;
+  height: 100%;
   @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    gap: 58px;
-    grid-column: 3/5;
-    grid-row: 1;
+    width: 60%;
+    margin-right: 2rem;
   }
   @media screen and (min-width: 992px) {
-    gap: 3rem;
+    width: 60%;
+    margin-right: 2rem;
   }
 `;
 const InstagramImage = styled.div`
@@ -102,7 +111,7 @@ const InstagramLink = styled.a`
     font-style: normal;
   }
 `;
-const InstagramSection = ({ images }) => {
+const InstagramSection = ({}) => {
   return (
     <InstagramContainer>
       <InstagramTextContainer>
@@ -111,11 +120,16 @@ const InstagramSection = ({ images }) => {
           target="_blank"
           rel="noreferrer"
         >
-          Följ @oops_silver på Instagram
+          Följ @oops_silver <br></br> på Instagram
         </InstagramLink>
       </InstagramTextContainer>
+      {/* <figure data-behold-id="FLLaLeqp4AOg5Nn7Hk4f"></figure> */}
+      {/* <script src="https://w.behold.so/widget.js" type="module"></script> */}
       <InstagramImageContainer>
-        <InstagramImage>
+        <figure data-behold-id="FLLaLeqp4AOg5Nn7Hk4f"></figure>
+        <script src="https://w.behold.so/widget.js" type="module"></script>
+
+        {/* <InstagramImage>
           <>
             <a href={images[0].permalink} target="_blank" rel="noreferrer">
               <NextImage
@@ -156,7 +170,7 @@ const InstagramSection = ({ images }) => {
               />
             </a>
           </>
-        </InstagramImageThree>
+        </InstagramImageThree> */}
       </InstagramImageContainer>
     </InstagramContainer>
   );
