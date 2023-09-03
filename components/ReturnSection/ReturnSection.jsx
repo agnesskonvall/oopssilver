@@ -7,11 +7,16 @@ const ContactWrapper = styled.div`
   list-style-type: none;
   align-items: center;
   flex-direction: column;
+  justify-items: center;
   width: 100vw;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const BoldText = styled.h2`
@@ -27,7 +32,7 @@ const Text = styled.p`
 const TextWrapper = styled.div`
   width: 60%;
   margin-left: 1rem;
-  margin: 4rem;
+  margin: 1rem;
 
   .info {
     text-align: center;
@@ -40,16 +45,18 @@ const ContactText = styled.div``;
 const ImageWrapper = styled.div`
   align-items: center;
   position: relative;
-  margin-left: 3rem;
+  justify-items: center;
   margin-bottom: 1rem;
-
-  @media screen and (min-width: 768px) {
+  width: 80%;
+  height: auto;
+  justify @media screen and (min-width: 768px) {
     margin-top: 1.5rem;
+    margin-left: 0rem;
+    width: 60%;
   }
 
   @media screen and (min-width: 992px) {
-    width: 35rem;
-    height: auto;
+    width: 100%;
     padding: 2rem;
   }
 `;

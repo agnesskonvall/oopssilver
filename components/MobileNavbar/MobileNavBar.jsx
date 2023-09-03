@@ -95,12 +95,12 @@ const MobileNavbar = ({ text, href, active }) => {
     <MobileNav>
       <NavContainer>
         <NavContainer>
-          <Link href={"/"}>
+          <a href={"/"}>
             <Logo src="/logo.svg"></Logo>
-          </Link>
-          <Link href={"/"}>
+          </a>
+          <a href={"/"}>
             <TitleText>OOPS Silver</TitleText>
-          </Link>
+          </a>
         </NavContainer>
         {!openMenu && (
           <HamburgerIcon
@@ -119,18 +119,19 @@ const MobileNavbar = ({ text, href, active }) => {
       {openMenu && (
         <NavWrapper>
           <NavList>
-            <Link href={"/smycken/ringar"}>
-              <NavItem className="one">SMYCKEN</NavItem>
-            </Link>
-            <Link href={"/faq"}>
-              <NavItem className="two">FAQ</NavItem>
-            </Link>
-            <Link href={"/kontakt"}>
-              <NavItem className="three">KONTAKT</NavItem>
-            </Link>
-            <Link href={"/bestall"}>
-              <NavItem className="four">BESTÄLLNING</NavItem>
-            </Link>
+            <NavItem className="one" href={"/smycken/ringar"}>
+              SMYCKEN
+            </NavItem>
+            <NavItem className="two" href={"/faq"}>
+              FAQ
+            </NavItem>
+            <NavItem className="three" href={"/kontakt"}>
+              KONTAKT
+            </NavItem>
+
+            <NavItem className="four" href={"/bestall"}>
+              BESTÄLLNING
+            </NavItem>
             <SocialMediaContainer>
               <SocialMediaLink
                 href="https://www.facebook.com/profile.php?id=100028578145139"

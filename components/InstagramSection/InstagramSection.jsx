@@ -120,7 +120,6 @@ const InstagramSection = ({}) => {
       </InstagramTextContainer>
       <InstagramImageContainer>
         <figure data-behold-id="FLLaLeqp4AOg5Nn7Hk4f"></figure>
-        <script src="https://w.behold.so/widget.js" type="module"></script>
 
         {/* <InstagramImage>
           <>
